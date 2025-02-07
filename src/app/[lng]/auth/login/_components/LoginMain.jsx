@@ -90,7 +90,7 @@ function LoginMain() {
         ),
         action: (e) => {
           e.preventDefault();
-          redirect(`/${locale}/auth/register`);
+          redirect(`register`);
         },
       },
     ],

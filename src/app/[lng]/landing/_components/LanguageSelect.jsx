@@ -11,8 +11,8 @@ const LanguageSelect = () => {
       defaultValue={pathname[1]}
       onChange={(e) => redirect(`/${e.target.value}/${route}`)}
     >
-      {languages.map((lng) => (
-        <option key={lng} value={lng}>
+      {languages.map((lng,index) => (
+        <option key={index} value={lng}>
           {lng.toUpperCase()}
         </option>
       ))}

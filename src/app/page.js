@@ -9,7 +9,6 @@ async function page() {
   }
 
   redirect(`/${locale ? locale.value : `en`}/landing`);
-  return <div>page</div>;
 }
 
 export default page;

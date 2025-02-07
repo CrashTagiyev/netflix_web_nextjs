@@ -78,7 +78,7 @@ function RegisterMain() {
         ),
         action: (e) => {
           e.preventDefault();
-          redirect("/auth/login");
+          redirect("login");
         },
       },
     ],

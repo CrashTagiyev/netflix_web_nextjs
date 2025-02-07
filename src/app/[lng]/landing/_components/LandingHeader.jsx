@@ -2,9 +2,9 @@ import Image from "next/image";
 import netflixIcon from "@assets/PNGs/netflixIcon.png";
 import Link from "next/link";
 import { translate } from "@/locales/translate";
-import { Select, SelectItem } from "@nextui-org/select";
 import LanguageSelect from "./LanguageSelect";
-function LandingHeader() {
+
+async function LandingHeader() {
   return (
     <header className="flex flex-row h-[120px] w-full  bg-transparent pt-[24px] justify-between sm:px-[148px]">
       <Image
@@ -16,7 +16,7 @@ function LandingHeader() {
       <div style={{ display: "flex", gap: "12px" }}>
         <LanguageSelect />
         <Link
-          href={"/auth/login"}
+          href={`auth/login`}
           className="bg-[#E50914] text-white text-center text-sm w-[75px] h-[25px]"
         >
           {translate(`logIn`)}
