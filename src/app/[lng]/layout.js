@@ -11,7 +11,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="flex-1 ">
         {children}
-        <Footer></Footer>
       </body>
     </html>
   );

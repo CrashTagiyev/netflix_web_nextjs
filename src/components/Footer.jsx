@@ -3,7 +3,7 @@ import { footerItems } from "./footerItems";
 
 function Footer() {
   return (
-    <footer className=" w-full lg:px-[148px] py-4 mt-[72px]">
+    <footer className=" w-full lg:px-[148px] py-4   pt-[50px  ] bg-black">
       <div>
         <p>Questions? Call 1-844-505-2993</p>
       </div>

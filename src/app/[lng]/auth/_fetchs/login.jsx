@@ -11,10 +11,11 @@ export const login = async (formData) => {
     },
     body: JSON.stringify(formData),
   });
+  const locale = (await cookies()).get("locale");
   const data = await response.json();
   if (data.token) {
     (await cookies()).set("token", data.token, { maxAge: 60 * 60 * 24 });
-    redirect("/");
+    redirect(`/${locale.value}/`);
   }
   return data;
 };

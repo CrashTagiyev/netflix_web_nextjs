@@ -2,7 +2,6 @@
 const nextConfig = {
   skipMiddlewareUrlNormalize: true,
   images: {
-    
     domains: ["image.tmdb.org"],
   },
 };

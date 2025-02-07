@@ -7,7 +7,7 @@ import MoreReasonCart from "./_components/MoreReasonCart";
 import { MoreReasonCartItems } from "./_items/MoreReasonCartItems";
 import LandingAccordion from "./_components/LandingAccordion";
 import { landingAccordionItems } from "./_items/landinAccordionItems";
-
+import Footer from "@/components/Footer";
 export const metadata = {
   title: "Netflix Landing Page",
 };
@@ -47,6 +47,7 @@ function Landing() {
         <p className="text-3xl">Frequently Asked Questions</p>
         <LandingAccordion items={landingAccordionItems} />
       </section>
+      <Footer/>
     </main>
   );
 }

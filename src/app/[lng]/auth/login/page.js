@@ -1,6 +1,7 @@
 import backgroundImage from "@assets/PNGs/backgroundImage.png";
 import AuthHeader from "../_components/AuthHeader";
 import LoginMain from "./_components/LoginMain";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Netflix Sign In",
@@ -19,6 +20,7 @@ async function Login() {
         <AuthHeader />
         <LoginMain />
       </div>
+      <Footer />
     </div>
   );
 }
