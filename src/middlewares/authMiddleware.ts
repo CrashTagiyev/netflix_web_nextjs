@@ -16,7 +16,6 @@ export const authMiddleware = (next) => {
     const response = await next(req, _next);
 
     const shortPathName = "/" + pathname.split("/").slice(2)[0];
-    console.log(`pathname`, shortPathName);
     if (protectedRoutes.includes(shortPathName)) {
       const token = req.cookies.get("token");
       if (token) {

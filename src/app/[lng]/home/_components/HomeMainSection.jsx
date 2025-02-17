@@ -16,7 +16,7 @@ function HomeMainSection({ topMovie, locale }) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="px-[90px] bg-black/50 h-window bg-blend-overlay"
+      className="px-[90px] bg-black/50  bg-blend-overlay"
     >
       <HomeNavBar setCurrentContent={setCurrentContent} />
       {currentContent === `home` ? (

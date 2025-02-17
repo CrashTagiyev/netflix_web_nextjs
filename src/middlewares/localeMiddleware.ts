@@ -13,7 +13,6 @@ export const localizationMiddleware = (next: any) => {
     }
 
     const lang = pathname.split("/")[1];
-    console.log(`lang`, lang);
     const response = await next(req, _next);
     if (!locale) {
       req.cookies.set("locale", lang.toLowerCase());

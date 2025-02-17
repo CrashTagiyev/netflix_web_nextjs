@@ -1,16 +1,17 @@
 import { fetchContentDetails } from "../../_fetchs/fetchContentDetails";
 import ContentChart from "../../_components/ContentChart";
+import SmiliarsCarousel from "./_components/SmiliarsCarousel";
 
 async function page({ params }) {
   const { contentType, id, lng } = await params;
   const content = await fetchContentDetails(contentType, id);
 
   return (
-    <div>
-      <div className="flex flex-row items-center justify-center">
+    <div className="max-w-[1440px] mx-auto">
+      <div className="flex flex-row  items-center justify-center">
         {content.trailers && content.trailers.length > 0 && (
           <iframe
-            className="w-full  h-[500px] lg:mx-[320px]"
+            className="w-screen   h-[500px] lg:mx-[320px]"
             src={`https://www.youtube.com/embed/${content.trailers[0].key}`}
           ></iframe>
         )}
@@ -27,15 +28,7 @@ async function page({ params }) {
         </div>
         <p className="mt-[20px]">{content.content.overview}</p>
         <div className="flex gap-[80px] mt-[51px] flex-wrap">
-          {content.similiars.map((similiar) => (
-            <div className="h-[250px]">
-              <ContentChart
-                contentType={contentType}
-                content={similiar}
-                locale={lng}
-              />
-            </div>
-          ))}
+          <SmiliarsCarousel similiars={content.similiars} lng={lng} contentType={contentType} />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ContentChart from "./ContentChart";
 
-function ContentSection({ currentContent ,locale}) {
+function ContentSection({ currentContent, locale }) {
   const [content, setContent] = useState([]);
 
   useEffect(() => {
@@ -28,14 +28,20 @@ function ContentSection({ currentContent ,locale}) {
   }, [currentContent]);
 
   return (
-    <div className="flex gap-[80px] mt-[51px] flex-wrap">
-      {content?.map((movie, index) => {
-        return (
-          <div key={index}>
-            <ContentChart locale={locale} contentType={currentContent} content={movie} />
-          </div>
-        );
-      })}
+    <div className="h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-[30px] gap-y-[30px] mt-[51px] w-[1160px]">
+      <div className="h-[300px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-[30px] gap-y-[30px] mt-[51px] w-[1160px]">
+        {content?.map((movie, index) => {
+          return (
+            <div key={index} className="self-center ">
+              <ContentChart
+                locale={locale}
+                contentType={currentContent}
+                content={movie}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

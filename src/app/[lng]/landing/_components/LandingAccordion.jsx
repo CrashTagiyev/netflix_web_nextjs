@@ -11,9 +11,9 @@ const LandingAccordion = ({ items }) => {
   return (
     <div className="mt-[17px]">
       {items.map((item, index) => (
-        <div key={index} className="mb-1 rounded-lg">
+        <div key={index} className="mb-2 rounded-lg">
           <button onClick={() => toggleItem(index)} className="w-full"> 
-            <div className="cursor-pointer flex items-center justify-between bg-[#2D2D2D] transition-all duration-300 hover:bg-[#3d3d3d] h-[54px] px-[24px] font-bold">
+            <div className="cursor-pointer flex items-center justify-between bg-[#2D2D2D] transition-all duration-300 hover:bg-[#3d3d3d] h-[54px] p-[40px] font-bold">
               <p className="font-roboto font-normal text-[24px] leading-[28.13px]">
                 {item.title}
               </p>

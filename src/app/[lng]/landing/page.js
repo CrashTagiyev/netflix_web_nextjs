@@ -14,15 +14,16 @@ export const metadata = {
 
 function Landing() {
   return (
-    <main>
+    <main className="max-w-[1440px] mx-auto ">
       <section
         style={{
           backgroundImage: `url(${backgroundImage?.src})`,
           backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",  
         }}
         className="relative bg-cover bg-center lg:h-[888px] md:h-[664px] "
       >
-        <div className="lg:h-[888px] md:h-[664px] custom-linear-gradient">
+        <div className=" lg:h-[888px] md:h-[664px] custom-linear-gradient">
           <LandingHeader />
           <GetStarted />
         </div>
